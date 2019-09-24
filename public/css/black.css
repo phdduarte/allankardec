@@ -1,0 +1,415 @@
+.bg-green-light{
+	background: #740303;
+}
+
+
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=6e2dd28a-95b6-42bd-9f5c-9da3895eca41");
+
+    /* ===============
+     * GILL SANS
+     * =============*/
+    @font-face{
+        font-family:"Gill Sans";
+        src:url("./fonts/gill-sans/beab4258-af94-4971-a0db-b7bc2bef74bc.eot?#iefix");
+        src:url("./fonts/gill-sans/beab4258-af94-4971-a0db-b7bc2bef74bc.eot?#iefix") format("eot"),
+            url("./fonts/gill-sans/cd5a93fc-2bb1-48df-8982-11119cd6e270.woff") format("woff"),
+            url("./fonts/gill-sans/b6bdc93b-2720-4c92-b68d-48499456178e.ttf") format("truetype"),
+            url("./fonts/gill-sans/944cce8d-20bf-41c1-ae29-2bc8199859db.svg#944cce8d-20bf-41c1-ae29-2bc8199859db") format("svg");
+        font-weight: normal;
+    }
+    @font-face{
+        font-family:"Gill Sans";
+        src:url("../fonts/gill-sans/1a6dec8e-26f9-4243-8495-835709538f92.eot?#iefix");
+        src:url("../fonts/gill-sans/1a6dec8e-26f9-4243-8495-835709538f92.eot?#iefix") format("eot"),
+            url("../fonts/gill-sans/f05272f9-83e3-4de6-8423-5d57f730c87b.woff") format("woff"),
+            url("../fonts/gill-sans/33f5d8d9-105f-4a49-9351-74ecae7f4a49.ttf") format("truetype"),
+            url("../fonts/gill-sans/b56150eb-5caa-4385-b907-373e97ddb2ff.svg#b56150eb-5caa-4385-b907-373e97ddb2ff") format("svg");
+        font-weight: bold;
+    }
+
+    /* ===============
+     * BERGAMONT
+     * =============*/
+    @font-face {
+        font-family: 'Bergamo';
+        src: url('../fonts/bergamo-pro/bergamopro-regular-webfont.eot');
+        src: url('../fonts/bergamo-pro/bergamopro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/bergamo-pro/bergamopro-regular-webfont.woff') format('woff'),
+             url('../fonts/bergamo-pro/bergamopro-regular-webfont.ttf') format('truetype'),
+             url('../fonts/bergamo-pro/bergamopro-regular-webfont.svg#bergamo_proregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Bergamo';
+        src: url('../fonts/bergamo-pro/bergamopro-italic-webfont.eot');
+        src: url('../fonts/bergamo-pro/bergamopro-italic-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/bergamo-pro/bergamopro-italic-webfont.woff') format('woff'),
+             url('../fonts/bergamo-pro/bergamopro-italic-webfont.ttf') format('truetype'),
+             url('../fonts/bergamo-pro/bergamopro-italic-webfont.svg#bergamo_proitalic') format('svg');
+        font-weight: normal;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: 'Bergamo';
+        src: url('../fonts/bergamo-pro/bergamopro-bold-webfont.eot');
+        src: url('../fonts/bergamo-pro/bergamopro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/bergamo-pro/bergamopro-bold-webfont.woff') format('woff'),
+             url('../fonts/bergamo-pro/bergamopro-bold-webfont.ttf') format('truetype'),
+             url('../fonts/bergamo-pro/bergamopro-bold-webfont.svg#bergamo_probold') format('svg');
+        font-weight: bold;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Bergamo';
+        src: url('../fonts/bergamo-pro/bergamopro-bolditalic-webfont.eot');
+        src: url('../fonts/bergamo-pro/bergamopro-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/bergamo-pro/bergamopro-bolditalic-webfont.woff') format('woff'),
+             url('../fonts/bergamo-pro/bergamopro-bolditalic-webfont.ttf') format('truetype'),
+             url('../fonts/bergamo-pro/bergamopro-bolditalic-webfont.svg#bergamo_probold_italic') format('svg');
+        font-weight: bold;
+        font-style: italic;
+    }
+
+
+            html, body {
+                background-color: #fff;
+                font-family: "Gill Sans", sans-serif;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -350px;
+}
+
+/*header*/
+
+/*end header*/
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .top-right {
+                position: absolute;
+                right: 10px;
+                top: 18px;
+            }
+
+            .content {
+                text-align: center;
+            }
+
+            .title {
+                font-size: 84px;
+            }
+
+            .links > a {
+                color: #636b6f;
+                padding: 0 25px;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            .m-b-md {
+                margin-bottom: 30px;
+            }
+
+            /*footer*/
+            .footer {
+    margin-top: 50px;
+}
+
+.footer,
+.push {
+    height: 300px;
+}
+
+.footer .footer-exhibitions {
+    height: 40%;
+    background: #333333;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+.footer .footer-navigation {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 18px;
+    position: relative;
+    height: 130px;
+    background: #740303;
+    text-align: center;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.footer .footer-exhibitions > div.container {
+    font-family: "Gill Sans", sans-serif;
+    position: relative;
+    top: 50%;
+    text-align: center;
+    color: #999999;
+    font-size: 18px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.min-height-40 {
+    min-height: 40rem;
+}
+
+.container-img {
+    position: relative;
+    width: 50%;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #a8bbb2;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.footer .footer-exhibitions > div.container a {
+    font-family: "Gill Sans", sans-serif;
+    color: #92ABA0;
+    font-size: 18px;
+    color: #fff;
+    padding: 3px;
+    margin-top: 15px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid #740303;
+}
+
+.footer .footer-navigation ul {
+    position: relative;
+    max-width: 940px;
+    padding: 0 30px;
+    margin: auto;
+    overflow: hidden;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+ol, ul {
+    list-style: none;
+}
+
+.footer .footer-navigation ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.footer .footer-navigation ul li a {
+    display: inline-block;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 3px solid #fff;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer .footer-navigation ul li.empty {
+    margin: 0;
+    width: 160px;
+}
+
+.footer .footer-navigation ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.footer-logo {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -60px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.footer .footer-copyright {
+    height: 20%;
+    background: #333333;
+}
+
+.footer .footer-copyright > div.container a {
+    font-family: "Gill Sans", sans-serif;
+    color: #92ABA0;
+}
+
+.footer .footer-copyright > div.container > div {
+    padding: 5px 0;
+}
+
+.footer .footer-copyright > div.container a {
+    font-family: "Gill Sans", sans-serif;
+    color: #92ABA0;
+}
+
+.mobile-only {
+    display: none;
+}
+
+.footer .footer-copyright > div.container {
+    font-family: "Gill Sans", sans-serif;
+    position: relative;
+    top: 50%;
+    text-align: center;
+    color: #999999;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+            /*end footer*/
+
+.carousel .carousel-item {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel .carousel-item .carousel-caption {
+    position: absolute;
+    bottom: 0px;
+    min-height: 0.1rem;
+    background: #740303;
+    background: rgba(116,3,3,0.9);
+    z-index: 10;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.3em;
+    color: #333;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    left: 0;
+
+}
+
+.carousel .carousel-item .carousel-caption .container {
+    padding: 10px 20px;
+    max-width: 800px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.white {
+    color: #fff;
+}
+
+.owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    height: 100%;
+    float: left;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+h1, h2, h3, h4, h5, h6, dt {
+    font-family: "Gill Sans", sans-serif;
+    line-height: 1.3em;
+    color: #323232;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+.heading h2 {
+    float: left;
+}
+
+.heading {
+    padding: 33px;
+    margin-top: 12px;
+    min-height: 40px;
+}
+
+figcaption{
+    font-family: "Gill Sans", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #4D4D4F;
+    line-height: 1.3em;
+    text-transform: uppercase;
+}
