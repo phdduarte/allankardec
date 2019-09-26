@@ -20,6 +20,13 @@ class ManuscritosController extends Controller
     	return view('manuscritos.lista',['manuscritos' => $manuscritos]);	
     }
 
+    public function show($id)
+    {
+        $manuscrito = Manuscrito::findOrFail($id);
+        
+        return view('manuscritos.show', ['manuscrito' => $manuscrito]);
+    }
+
     public function tipo($tipo='Manuscrito')
     {
       $pos = array_search(ucfirst($tipo), $this->tipoManuscrito);
@@ -41,26 +48,24 @@ class ManuscritosController extends Controller
 
     public function contato()
     {
-      $manuscritos = Manuscrito::get();
-      return view('manuscritos.contato',['manuscritos' => $manuscritos]); 
+      
+      return view('manuscritos.contato'); 
     }
 
     public function sobre()
     {
-      $manuscritos = Manuscrito::get();
-      return view('manuscritos.sobre',['manuscritos' => $manuscritos]); 
+      
+      return view('manuscritos.sobre'); 
     }
 
     public function termos()
     {
-      $manuscritos = Manuscrito::get();
-      return view('manuscritos.termos',['manuscritos' => $manuscritos]); 
+      return view('manuscritos.termos'); 
     }
 
     public function glossario()
     {
-      $manuscritos = Manuscrito::get();
-      return view('manuscritos.glossario',['manuscritos' => $manuscritos]); 
+      return view('manuscritos.glossario'); 
     }
 
     public function imprimir()
@@ -102,8 +107,8 @@ class ManuscritosController extends Controller
     {
       $this->valida($request);
 
-      $manuscritos = new Manuscrito;
-      $manuscritos = $manuscritos->create($request->except('pic', 'pdf'));//retorna uma instancia do banco
+      $manuscrito = new Manuscrito;
+      $manuscrito = $manuscrito->create($request->except('pic', 'pdf'));//retorna uma instancia do banco
       if($request->file('pic'))
       {
           $file = $request->file('pic');

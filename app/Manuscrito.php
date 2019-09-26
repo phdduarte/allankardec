@@ -8,12 +8,10 @@ class Manuscrito extends Model
 {
     protected $fillable = [
         'titulo', 
-        'criadores', 
+        'descricao', 
         'data',
-        'local',
-        'idioma',
-        'numero',
-        'tipo',
-        'pic',
+        'proprietario',
+        'folhas',
+        'tipo'
     ];
 }

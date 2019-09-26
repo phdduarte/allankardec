@@ -24,20 +24,22 @@
                             <div class="p1">
                               <ul class="list-reset">
                                 <li>
-                                  <b>ID: </b>{{$manuscrito -> id}}
+                                  <b>id: </b>{{$manuscrito->id}}
                                 </li>
                                 <li>
-                                  <b>TITULO: </b>{{$manuscrito -> titulo}}
+                                  <b>Título: </b>{{$manuscrito->titulo}}
                                 </li>
                                 <li>
-                                  <b>CRIADORES: </b>{{$manuscrito -> criadores}}
+                                  <b>Proprietário: </b>{{$manuscrito->proprietario}}
                                 </li>
                                 <li>
-                                  <b>DATA: </b>{{$manuscrito -> data}}
+                                  <b>Data: </b>{{$manuscrito -> data}}
                                 </li>
                                 <li>
+                                <a href="/pdf/{{$manuscrito->id}}">abrir</a> | 
                                 <a href="/uploads/pdf/{{$manuscrito->pdf}}">Download</a>
                                 </li>
+                                
                               </ul>
                             </div>
                           </div>
@@ -51,50 +53,3 @@
     </div>
 </div>
 @endsection
-
-
-
-
-
-<!--table class="table table-striped">
-                        <thead>
-                            <tr>
-                              <th scope="col">ID</th>
-                              <th scope="col">TITULO</th>
-                              <th scope="col">CRIADOR</th>
-                              <th scope="col">DATA</th>
-                              <th scope="col">TIPO</th>
-                              <th scope="col">ACÕES</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach($manuscritos as $manuscrito)
-                                <tr>
-                                  <th scope="row">{{$manuscrito -> id}}</th>
-                                  <td>{{$manuscrito -> titulo}}</td>
-                                  <td>{{$manuscrito -> criadores}}</td>
-                                  <td>{{$manuscrito -> data}}</td>
-                                  <td>
-                                    @if ($manuscrito -> tipo === '0')
-                                      Manuscrito
-                                    @endif
-                                    @if ($manuscrito -> tipo === '1')
-                                      Carta
-                                    @endif
-                                    @if ($manuscrito -> tipo === '2')
-                                      Foto
-                                    @endif
-                                    @if ($manuscrito -> tipo === '3')
-                                      Jornal
-                                    @endif
-                                    @if ($manuscrito -> tipo === '4')
-                                      Livro
-                                    @endif
-                                    @if ($manuscrito -> tipo === '5')
-                                      Revista
-                                    @endif
-                                  </td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table-->

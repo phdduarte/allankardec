@@ -28,20 +28,17 @@
                     {!!Form::label('titulo','Titulo')!!}
                     {!!Form::input('text','titulo',null,['class' => 'form-control','autofocus','placeholder' => 'Titulo'])!!}  
 
-                    {!!Form::label('criadores','Criadores')!!}
-                    {!!Form::input('text','criadores',null,['class' => 'form-control',null,'placeholder' => 'Criadores'])!!}
+                    {!!Form::label('descricao','Descrição')!!}
+                    {!!Form::input('text','descricao',null,['class' => 'form-control',null,'placeholder' => 'Descrição'])!!}
+
+                    {!!Form::label('proprietario','Proprietário')!!}    
+                    {!!Form::input('text','proprietario',null,['class' => 'form-control',null,'placeholder' => 'Proprietário'])!!}   
 
                     {!!Form::label('data','Data')!!}    
                     {!!Form::input('text','data',null,['class' => 'form-control',null,'placeholder' => 'Data'])!!}  
 
-                    {!!Form::label('local','Local de origem')!!}    
-                    {!!Form::input('text','local',null,['class' => 'form-control',null,'placeholder' => 'Local de origem'])!!}   
-
-                    {!!Form::label('idioma','Idioma')!!}    
-                    {!!Form::input('text','idioma',null,['class' => 'form-control',null,'placeholder' => 'Idioma'])!!}  
-
-                    {!!Form::label('numero','Numero de folhas')!!}   
-                    {!!Form::input('number', 'numero', null, ['class' => 'form-control', null, 'placeholder' => 'Numero de folhas']) !!}
+                    {!!Form::label('folhas','Número de folhas')!!}   
+                    {!!Form::input('number', 'folhas', null, ['class' => 'form-control', null, 'placeholder' => 'Número de folhas']) !!}
                     {!!Form::label('tipo','Tipo do arquivo')!!}
                     {{ Form::select('tipo', $tipoManuscrito, 'Manuscrito',['class' => 'form-control', null]) }}
                     <br>
