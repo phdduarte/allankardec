@@ -20,6 +20,25 @@ class ManuscritosController extends Controller
     	return view('manuscritos.lista',['manuscritos' => $manuscritos]);	
     }
 
+    public function search(Request $request){
+      $terms = $request->input('q');
+      
+      if(empty($terms)){
+        return back()->with('erro','Erro: digite o que deseja buscar');        
+      }
+      
+      $manuscritos = Manuscrito::where('codigo', $terms)->paginate(12);
+      if(count($manuscritos) == 0){
+        
+        $manuscritos = Manuscrito::where('titulo', $terms)
+                      ->orWhere('descricao',$terms)
+                      ->orWhere('proprietario',$terms)
+                      ->orWhere('data',$terms)
+                      ->paginate(12);
+      }
+      return view('manuscritos.tipo', ['manuscritos' => $manuscritos, 'tipo' => 'Pesquisa']); 
+    }
+
     public function show($id)
     {
         $manuscrito = Manuscrito::findOrFail($id);

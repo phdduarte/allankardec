@@ -14,6 +14,33 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/black.css') }}" rel="stylesheet">
     <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
+    <style>
+    .flex_container{
+        max-width: 420px;
+        height: 35px;
+        margin: auto;
+        display: flex;
+        margin-top: -20px;
+    }
+    .search{
+        flex-direction: row;
+    }
+
+    div.item{
+        /* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
+        flex: 1;
+        margin: 3px;
+        text-align: center;
+        font-size: 1em;
+        justify-content: center;
+    }
+    div.item input{
+        width: 100%;
+        height: 100%;
+        
+        border-radius: 16px;
+    }
+</style>
 </head>
 <body>
     <div id="app" class="bg-green-light">
@@ -71,6 +98,14 @@
                 </div>
             </div>
         </nav>
+
+        <div class="flex_container search">
+            <div class="item">
+                <form action="/search" method="get">
+                    <input type="text" name="q" placeholder="Digite sua pesquisa e tecle enter">
+                </form>
+            </div>
+        </div>
 
         @yield('content')
     </div>

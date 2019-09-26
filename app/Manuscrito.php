@@ -9,6 +9,7 @@ class Manuscrito extends Model
     protected $fillable = [
         'titulo', 
         'descricao', 
+        'codigo',
         'data',
         'proprietario',
         'folhas',

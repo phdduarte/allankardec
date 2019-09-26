@@ -24,7 +24,9 @@
                     @else   
                         {!!Form::open(['url' => 'manuscritos/salvar', 'files'=>true])!!}
                     @endif  
-
+                        
+                    {!!Form::label('codigo','Código')!!}
+                    {!!Form::input('text','codigo',null,['class' => 'form-control','autofocus','placeholder' => 'AAAAMMDD#NÚMERO'])!!}
                     {!!Form::label('titulo','Titulo')!!}
                     {!!Form::input('text','titulo',null,['class' => 'form-control','autofocus','placeholder' => 'Titulo'])!!}  
 

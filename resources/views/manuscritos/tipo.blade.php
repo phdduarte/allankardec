@@ -11,7 +11,12 @@
                 <div class="panel-body">
                     @if(Session::has('mensagem_sucesso')) 
                         <div class="alert alert-danger">{{Session::get('mensagem_sucesso')}}</div>
-                    @endif  
+                    @endif 
+                    @if(Session::has('erro')) 
+                        <div class="alert alert-danger">{{Session::get('erro')}}</div>
+                    @endif   
+
+                    
                     <div class="clearfix">
                       @foreach($manuscritos as $manuscrito)
                           <div class="col col-4 min-height-40">
@@ -24,7 +29,7 @@
                             <div class="p1">
                               <ul class="list-reset">
                                 <li>
-                                  <b>id: </b>{{$manuscrito->id}}
+                                  <b>id: </b>{{$manuscrito->codigo}}
                                 </li>
                                 <li>
                                   <b>Título: </b>{{$manuscrito->titulo}}

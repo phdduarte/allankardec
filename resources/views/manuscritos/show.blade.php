@@ -6,7 +6,7 @@
         <div class="">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                GLOSSÁRIO
+                {{ $manuscrito->titulo }}
                 </div>
                 <div class="panel-body">
                     @if(Session::has('mensagem_sucesso')) 

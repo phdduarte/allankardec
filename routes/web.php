@@ -1,33 +1,14 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('usuarios','UsuariosController@index');
-
-
-
-
-
-// Route::get('/cartas','ManuscritosController@cartas');
-// Route::get('/fotos','ManuscritosController@fotos');
-// Route::get('/jornais','ManuscritosController@jornais');
-// Route::get('/livros','ManuscritosController@livros');
-// Route::get('/revistas','ManuscritosController@revistas');
-
 Route::get('/links','ManuscritosController@links');
 Route::get('/contato','ManuscritosController@contato');
 Route::get('/sobre','ManuscritosController@sobre');
 Route::get('/termos','ManuscritosController@termos');
 Route::get('/glossario','ManuscritosController@glossario');
+Route::get('/','ManuscritosController@imprimir');
+
+Route::get('/search','ManuscritosController@search');
 
 Auth::routes();
 
@@ -39,15 +20,6 @@ Route::middleware(['auth'])->group(function () {
     Route::post('manuscritos/salvar','ManuscritosController@salvar');
     Route::patch('manuscritos/{manuscrito}','ManuscritosController@atualizar');
     Route::delete('manuscritos/{manuscrito}','ManuscritosController@deletar');
-  
-    Route::get('/','ManuscritosController@imprimir');
 });  
-
+Route::get('/pdf/{id}','ManuscritosController@show');
 Route::get('/{tipo}','ManuscritosController@tipo');
-
-
-
-
-
-
-
