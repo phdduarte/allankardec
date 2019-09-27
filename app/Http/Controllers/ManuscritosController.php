@@ -9,6 +9,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Redirect;
 use File;
+use Illuminate\Support\Facades\Auth;
 
 class ManuscritosController extends Controller
 {
@@ -16,8 +17,7 @@ class ManuscritosController extends Controller
 
     public function index()
     {
-      $manuscritos = Manuscrito::paginate(10);
-    	return view('manuscritos.lista',['manuscritos' => $manuscritos]);	
+      $manuscritos = Manuscrito::where('user_id', Auth::user()->id)->paginate(10);	
     }
 
     public function search(Request $request){
@@ -155,7 +155,7 @@ class ManuscritosController extends Controller
 
     public function editar($id)
     {
-        $manuscrito = Manuscrito::findOrFail($id);
+      $manuscrito = Manuscrito::where('user_id', Auth::user()->id)->findOrFail($id);
         
         return view('manuscritos.formulario',['manuscrito' => $manuscrito, 'tipoManuscrito' => $this->tipoManuscrito]);
     }
