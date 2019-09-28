@@ -35,11 +35,17 @@
                                   <b>Título: </b>{{$manuscrito->titulo}}
                                 </li>
                                 <li>
-                                  <b>Proprietário: </b>{{$manuscrito->proprietario}}
+                                  <b>Descrição:</b> {{ $manuscrito->descricao }}
                                 </li>
                                 <li>
-                                  <b>Data: </b>{{$manuscrito -> data}}
+                                  <b>Proprietário: </b>{{ $manuscrito->proprietario }}
                                 </li>
+                                <li>
+                                  <b>Data: </b>{{ $manuscrito->data }}
+                                </li>
+                                <li>
+                                    <b>Páginas: </b>{{ $manuscrito->folhas }}
+                                  </li>
                                 <li>
                                 <a href="/pdf/{{$manuscrito->id}}">abrir</a> | 
                                 <a href="/uploads/pdf/{{$manuscrito->pdf}}">Download</a>
