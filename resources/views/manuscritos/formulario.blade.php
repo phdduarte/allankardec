@@ -25,6 +25,8 @@
                         {!!Form::open(['url' => 'manuscritos/salvar', 'files'=>true])!!}
                     @endif  
                         
+
+                    {!!Form::hidden('user_id', Auth::user()->id)!!}    
                     {!!Form::label('codigo','Código')!!}
                     {!!Form::input('text','codigo',null,['class' => 'form-control','autofocus','placeholder' => 'AAAAMMDD#NÚMERO'])!!}
                     {!!Form::label('titulo','Titulo')!!}
