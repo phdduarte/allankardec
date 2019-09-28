@@ -27,13 +27,13 @@ class ManuscritosController extends Controller
         return back()->with('erro','Erro: digite o que deseja buscar');        
       }
       
-      $manuscritos = Manuscrito::where('codigo', $terms)->paginate(12);
+      $manuscritos = Manuscrito::where('codigo','like', '%'.$terms.'%')->paginate(12);
       if(count($manuscritos) == 0){
         
-        $manuscritos = Manuscrito::where('titulo', $terms)
-                      ->orWhere('descricao',$terms)
-                      ->orWhere('proprietario',$terms)
-                      ->orWhere('data',$terms)
+        $manuscritos = Manuscrito::where('titulo','like', "%$terms%")
+                      ->orWhere('descricao','like',"%$terms%")
+                      ->orWhere('proprietario','like',"%$terms%")
+                      ->orWhere('data','like',"%$terms%")
                       ->paginate(12);
       }
       return view('manuscritos.tipo', ['manuscritos' => $manuscritos, 'tipo' => 'Pesquisa']); 

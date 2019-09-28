@@ -522,6 +522,31 @@
 @keyframes come-in {
   to { transform: translateY(0); }
 }
+.flex_container{
+        max-width: 420px;
+        height: 35px;
+        margin: auto;
+        display: flex;
+        margin-bottom: -30px;
+    }
+    .search{
+        flex-direction: row;
+    }
+
+    div.item{
+        /* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
+        flex: 1;
+        margin: 3px;
+        text-align: center;
+        font-size: 1em;
+        justify-content: center;
+    }
+    div.item input{
+        width: 100%;
+        height: 100%;
+        
+        border-radius: 16px;
+    }
     </style>
 </head>
 
@@ -624,6 +649,14 @@
         </div>
         <!-- Grid row -->
         <div class="container">
+                <div class="flex_container search">
+                        <div class="item">
+                            <form action="/search" method="get">
+                                <input type="text" name="q" placeholder="Digite sua pesquisa e tecle enter">
+                            </form>
+                        </div>
+                    </div>
+            
             <div class="center py3">
                 <h2 class="h1">O MUSEU</h2>
             </div>

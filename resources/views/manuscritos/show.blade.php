@@ -1,5 +1,11 @@
 @extends('layouts.app')
 @section('content')
+<style>
+  canvas{
+    min-width: 10px;
+    min-height: 10px;
+  }
+</style>
 <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
 <div class="container">
     <div class="row">
@@ -17,9 +23,14 @@
                       <button id="next">Próxima</button>
                       &nbsp; &nbsp;
                       <span>Página: <span id="page_num"></span> de <span id="page_count"></span></span>
+                      
+                      &nbsp; &nbsp;
+                      <button id="zoom_out" >-</button>
+                      <button id="zoom_in">+</button>
                     </div>
-                    
-                    <canvas id="the-canvas"></canvas>
+                    <div style="max-width:80%;overflow:auto">
+                      <canvas id="the-canvas"></canvas>
+                    </div>                  
                 </div>
             </div>
         </div>
@@ -36,7 +47,7 @@ var pdfDoc = null,
     pageNum = 1,
     pageRendering = false,
     pageNumPending = null,
-    scale = 0.8,
+    pdfScale = 1,
     canvas = document.getElementById('the-canvas'),
     ctx = canvas.getContext('2d');
 
@@ -44,14 +55,15 @@ var pdfDoc = null,
  * Get page info from document, resize canvas accordingly, and render page.
  * @param num Page number.
  */
-function renderPage(pageNumber) {
+function renderPage(pageNumber, s) {
   pageRendering = true;
   
   // Using promise to fetch the page
   pdfDoc.getPage(pageNumber).then(function(page) {
-    console.log('Page loaded');
+    console.log('Page loaded', s);
     
-    var scale = 1.5;
+    var scale = s;
+    pdfScale = scale;
     var viewport = page.getViewport({scale: scale});
 
     // Prepare canvas using PDF page dimensions
@@ -59,7 +71,7 @@ function renderPage(pageNumber) {
     var context = canvas.getContext('2d');
     canvas.height = viewport.height;
     canvas.width = viewport.width;
-
+    
     // Render PDF page into canvas context
     var renderContext = {
       canvasContext: context,
@@ -79,8 +91,8 @@ function renderPage(pageNumber) {
  * finised. Otherwise, executes rendering immediately.
  */
 function queueRenderPage(num) {
-  
-    renderPage(num);
+    
+    renderPage(num, pdfScale);
   
 }
 
@@ -107,12 +119,34 @@ function onNextPage() {
   queueRenderPage(pageNum);
 }
 
+function zoomout(){
+    if (pdfScale <= 0.25) {
+        return;
+    }
+    var pn = parseInt(document.getElementById('page_num').textContent);
+    pdfScale = pdfScale - 0.25;
+    
+    queueRenderPage(pn);
+}
+
+function zoomin() {
+    var pn = parseInt(document.getElementById('page_num').textContent)
+    pdfScale = pdfScale + 0.25;
+    queueRenderPage(pn);
+    //displayPage(shownPdf, pageNum);
+}
 
 document.addEventListener('DOMContentLoaded', function() {
   var prev = document.getElementById('prev');
-  prev.addEventListener('click', onPrevPage);
+    prev.addEventListener('click', onPrevPage);
   var next = document.getElementById('next');
-  next.addEventListener('click', onNextPage);
+    next.addEventListener('click', onNextPage);
+  
+  var zoom_in = document.getElementById('zoom_in');
+    zoom_in.addEventListener('click', zoomin);
+  var zoom_out = document.getElementById('zoom_out');
+    zoom_out.addEventListener('click', zoomout);
+  
 
 });
 
@@ -125,7 +159,7 @@ pdfjsLib.getDocument({data: pdfData}).promise.then(function(pdfDoc_) {
   document.getElementById('page_count').textContent = pdfDoc.numPages;
   
   // Initial/first page rendering
-  renderPage(pageNum);
+  renderPage(pageNum, pdfScale);
 });
 </script>
 
