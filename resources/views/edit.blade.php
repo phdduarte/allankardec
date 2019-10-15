@@ -8,14 +8,16 @@
                 <div class="panel-heading">Registro de usuários</div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+                    <form class="form-horizontal" method="POST" action="{{ route('usuarios.update', $user->id) }}">
                         {{ csrf_field() }}
+                        <input name="_method" type="hidden" value="PUT">
+
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">Nome</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="name" type="text" class="form-control" name="name" value="{{ $user->name }}" required autofocus>
 
                                 @if ($errors->has('name'))
                                     <span class="help-block">
@@ -29,7 +31,7 @@
                             <label for="email" class="col-md-4 control-label">E-Mail:</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                                <input id="email" type="email" class="form-control" name="email" value="{{ $user->email }}" required>
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -39,27 +41,25 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Senha</label>
+                        <div class="form-group{{ $errors->has('confirmed') ? ' has-error' : '' }}">
+                            <label for="email" class="col-md-4 control-label">Confirmado:</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
+                                
+                                <select name="confirmed" id="confirmed" class="form-control">
+                                    <option value="1" @if($user->confirmed===true)selected @endif>Sim</option>
+                                    <option value="0" @if($user->confirmed===false)selected @endif>Não</option>
 
-                                @if ($errors->has('password'))
+                                </select>
+
+                                @if ($errors->has('confirmed'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
+                                        <strong>{{ $errors->first('confirmed') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
-
-                        <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirmação de senha</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
+                        
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">

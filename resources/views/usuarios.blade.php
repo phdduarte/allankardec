@@ -1,100 +1,59 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Adair</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">{{ $texto }}
+                    @if(Auth::user()->type=='admin')
+                        <a class="pull-right" href="{{ route('usuarios.create') }}">Novo Usuário{+}</a>
                     @endif
                 </div>
-            @endif
 
-            <div class="content">
-                <div class="title m-b-md">
-                    {{ $texto }}
+                <div class="panel-body">
+                    @if(Session::has('mensagem_sucesso')) 
+                        <div class="alert alert-danger">{{Session::get('mensagem_sucesso')}}</div>
+                    @endif  
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                              <th scope="col">Nome</th>
+                              <th scope="col">E-mail</th>
+                              <th scope="col">Tipo</th>
+                              <th scope="col">Confirmado</th>
+                              <th scope="col">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($users as $user)
+                                <tr>
+                                    <th scope="row">{{$user->name}}</th>
+                                    <td>{{$user->email}}</td>
+                                    <td>{{$user->type}}</td>
+                                    <td>
+                                        @if ($user->confirmed == true)
+                                        Liberado
+                                        @else
+                                        Não liberado
+                                        @endif
+                                    </td>
+                                    <td>
+                                    <a href="{{route('usuarios.edit', $user->id)}}" class="btn btn-xs btn-default">Editar</a>
+                                        @if(Auth::user()->id != $user->id)
+                                        {!!Form::open(['method' => 'DELETE','url' => route('usuarios.destroy', $user->id),'style' => 'display: inline;'])!!}
+                                            <button type="submit" class="btn btn-xs btn-danger">Excluir</button>
+                                        {!!Form::close()!!}
+                                        @endif
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                    {{ $users->links() }}
                 </div>
-
-                @if($checagem == true)
-
-                    Checagem = true
-
-                    @foreach($usuarios as $usuario)
-                        {{ $usuario }}</br>
-                    @endforeach
-                @else
-
-                    Checagem = false
-
-                @endif
             </div>
         </div>
-    </body>
-</html>
+    </div>
+</div>
+@endsection

@@ -15,9 +15,15 @@
                         <div class="alert alert-success">{{Session::get('mensagem_sucesso')}}</div>
                     @endif 
 
-                    @if(Session::has('erro')) 
-                        <div class="alert alert-danger">{{Session::get('erro')}}</div>
-                    @endif   
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
 
                     @if(Request::is('*/editar')) 
                         {!!Form::model($manuscrito,['method' => 'PATCH','url' => 'manuscritos/'.$manuscrito->id, 'files'=>true])!!}
@@ -26,7 +32,6 @@
                     @endif  
                         
 
-                    {!!Form::hidden('user_id', Auth::user()->id)!!}    
                     {!!Form::label('codigo','Código')!!}
                     {!!Form::input('text','codigo',null,['class' => 'form-control','autofocus','placeholder' => 'AAAAMMDD#NÚMERO'])!!}
                     {!!Form::label('titulo','Titulo')!!}
@@ -35,14 +40,11 @@
                     {!!Form::label('descricao','Descrição')!!}
                     {!!Form::input('text','descricao',null,['class' => 'form-control',null,'placeholder' => 'Descrição'])!!}
 
-                    {!!Form::label('proprietario','Proprietário')!!}    
-                    {!!Form::input('text','proprietario',null,['class' => 'form-control',null,'placeholder' => 'Proprietário'])!!}   
-
                     {!!Form::label('data','Data')!!}    
                     {!!Form::input('text','data',null,['class' => 'form-control',null,'placeholder' => 'Data'])!!}  
 
-                    {!!Form::label('folhas','Número de folhas')!!}   
-                    {!!Form::input('number', 'folhas', null, ['class' => 'form-control', null, 'placeholder' => 'Número de folhas']) !!}
+                    {!!Form::label('numero','Número de folhas')!!}   
+                    {!!Form::input('number', 'numero', null, ['class' => 'form-control', null, 'placeholder' => 'Número de folhas']) !!}
                     {!!Form::label('tipo','Tipo do arquivo')!!}
                     {{ Form::select('tipo', $tipoManuscrito, 'Manuscrito',['class' => 'form-control', null]) }}
                     <br>

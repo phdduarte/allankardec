@@ -8,6 +8,13 @@
                 <div class="panel-heading">Login</div>
 
                 <div class="panel-body">
+                    @if(Session::has('sucesso')) 
+                        <div class="alert alert-success">{{Session::get('mensagem_sucesso')}}</div>
+                    @endif 
+
+                    @if(Session::has('erro')) 
+                        <div class="alert alert-danger">{{Session::get('erro')}}</div>
+                    @endif   
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 

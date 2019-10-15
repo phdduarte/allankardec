@@ -1,6 +1,6 @@
 <?php
 
-Route::get('usuarios','UsuariosController@index');
+
 Route::get('/links','ManuscritosController@links');
 Route::get('/contato','ManuscritosController@contato');
 Route::get('/sobre','ManuscritosController@sobre');
@@ -20,6 +20,12 @@ Route::middleware(['auth'])->group(function () {
     Route::post('manuscritos/salvar','ManuscritosController@salvar');
     Route::patch('manuscritos/{manuscrito}','ManuscritosController@atualizar');
     Route::delete('manuscritos/{manuscrito}','ManuscritosController@deletar');
+
+    Route::resource('usuarios', 'UsuariosController');
+
+    // Route::get('usuarios','UsuariosController@index');
+    // Route::get('usuarios/novo','UsuariosController@create');
+    // Route::delete('usuarios/novo','UsuariosController@create');
 });  
 Route::get('/pdf/{id}','ManuscritosController@show');
 Route::get('/{tipo}','ManuscritosController@tipo');

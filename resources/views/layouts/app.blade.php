@@ -77,8 +77,12 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+
                                     <li>
                                         <li><a href="{{ url('/manuscritos/') }}">Gerenciar itens</li>
+                                        @if(Auth::user()->type == 'admin')
+                                            <li><a href="{{ url('/usuarios/') }}">Gerenciar Usuários</li> 
+                                        @endif
                                     </li>
                                     <li>
                                         <a href="{{ route('logout') }}"

@@ -553,6 +553,7 @@
 <body>
     <div class="wrapper">
         <div class="flex-center position-ref" style="height: 12rem;">
+            
             @if (Route::has('login'))
             <div class="top-right links">
                 @if (Auth::check())
@@ -580,6 +581,13 @@
 
         </div>
         <div class="">
+            @if(Session::has('sucesso')) 
+                <div class="alert alert-success">{{Session::get('sucesso')}}</div>
+            @endif 
+
+            @if(Session::has('erro')) 
+                <div class="alert alert-danger">{{Session::get('erro')}}</div>
+            @endif   
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
