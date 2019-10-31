@@ -40,6 +40,9 @@
                     {!!Form::label('descricao','Descrição')!!}
                     {!!Form::input('text','descricao',null,['class' => 'form-control',null,'placeholder' => 'Descrição'])!!}
 
+                    {!!Form::label('proprietario','Proprietário')!!}
+                    {!!Form::input('text','proprietario',null,['class' => 'form-control','autofocus','placeholder' => 'Proprietário'])!!}  
+
                     {!!Form::label('data','Data')!!}    
                     {!!Form::input('text','data',null,['class' => 'form-control',null,'placeholder' => 'Data'])!!}  
 

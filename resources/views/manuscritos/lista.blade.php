@@ -27,10 +27,10 @@
                         <tbody>
                             @foreach($manuscritos as $manuscrito)
                                 <tr>
-                                  <th scope="row">{{$manuscrito -> id}}</th>
+                                  <th scope="row">{{$manuscrito->codigo}}</th>
                                   <td>{{$manuscrito -> titulo}}</td>
-                                  <td class="xs-hide sm-hide">{{$manuscrito -> criadores}}</td>
-                                  <td class="xs-hide sm-hide">{{$manuscrito -> data}}</td>
+                                  <td class="xs-hide sm-hide">{{ $manuscrito->user->name }}</td>
+                                  <td class="xs-hide sm-hide">{{ $manuscrito->data }}</td>
                                   <td>
                                     @if ($manuscrito -> tipo === '0')
                                       Manuscrito

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use App\User;
 
 class UsuariosController extends Controller
@@ -40,6 +41,14 @@ class UsuariosController extends Controller
         $input = request();
         
         $user = User::findOrFail($id)->update($input->all());
+        $user = User::find($id);
+        if($user->confirmed===true){
+          Mail::send('emails.liberado', $user->toArray(), function($message) use ($user)
+          {
+              $message->to($user->email, 'contato@allankardec.online')
+                      ->subject('Cadastro liberado!');
+          });
+        }
 
         return redirect()->route('usuarios.index');
     }

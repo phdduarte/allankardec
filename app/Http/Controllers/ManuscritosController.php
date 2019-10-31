@@ -18,11 +18,13 @@ class ManuscritosController extends Controller
     public function index()
     {
         $user = auth()->user();
+        
         if($user->type == 'admin'){ // se for admin vê todos os manuscritos
-            $manuscritos = Manuscrito::paginate(10);	
+            $manuscritos = Manuscrito::with('user')->paginate(10);	
         }else{
-            $manuscritos = Manuscrito::where('user_id', $user->id)->paginate(10);	
+            $manuscritos = Manuscrito::with('user')->where('user_id', $user->id)->paginate(10);	
         }
+        
         return view('manuscritos.lista',['manuscritos' => $manuscritos]);
     }
 
@@ -150,6 +152,7 @@ class ManuscritosController extends Controller
       $manuscrito = new Manuscrito;
       $manuscrito = $manuscrito->create($request->except('pic', 'pdf'));//retorna uma instancia do banco
       $manuscrito->user_id = $user->id;
+      $manuscrito->save();
 
       if($request->file('pic'))
       {
@@ -178,22 +181,30 @@ class ManuscritosController extends Controller
 
     public function editar($id)
     {
-        $manuscrito = Manuscrito::where('user_id', Auth::user()->id)->findOrFail($id);
+        $user = auth()->user();
+        
+        if($user->type == 'admin'){ // se for admin vê todos os manuscritos
+            $manuscrito = Manuscrito::findOrFail($id);
+        }else{
+            $manuscrito = Manuscrito::where('user_id', Auth::user()->id)->findOrFail($id);
+        }
+        
         
         return view('manuscritos.formulario',['manuscrito' => $manuscrito, 'tipoManuscrito' => $this->tipoManuscrito]);
     }
 
     public function atualizar($id, Request $request)
     {
+      
       $validator = Validator::make($request->all(), [
-        'codigo' => 'unique:manuscritos,codigo|max:25',
+        'codigo' => 'unique:manuscritos,codigo,'.$id.'|max:25',
         'titulo' => 'required',
         'descricao' => 'required|max:255',
         'data' => 'required|date_format:d/m/Y',
 
       ]);
       
-      
+
       if ($validator->fails()) {
           return back()->withErrors($validator)->withInput();
       }

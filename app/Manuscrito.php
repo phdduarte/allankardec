@@ -11,6 +11,8 @@ class Manuscrito extends Model
         'data',
     ];
 
+
+
     protected $fillable = [
         'titulo', 
         'descricao', 
@@ -21,9 +23,9 @@ class Manuscrito extends Model
         'tipo'
     ];
 
-    public function getDataAttribute()
+    public function getDataAttribute($value)
     {
-        return $this->data->format('d/m/Y');
+        return $data = date('d/m/Y', strtotime($value));
     }
 
     public function setDataAttribute($value)

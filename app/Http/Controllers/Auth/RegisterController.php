@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class RegisterController extends Controller
 {
@@ -70,6 +71,17 @@ class RegisterController extends Controller
             );
         }
         $user = $this->create($request->all());
+
+        Mail::send('emails.cadastro', $user->toArray(), function($message) use ($user)
+        {
+            $message->to($user->email, 'contato@allankardec.online')
+                    ->subject('Bem Vindo!');
+        });
+
+        if (Mail::failures()) {
+           redirect('/')->with('sucesso','Cadastrado com sucesso, aguarde a liberação do seu registro, não conseguimos enviar email');
+         }
+
         return redirect('/')->with('sucesso','Cadastrado com sucesso, aguarde a liberação do seu registro');
         
     }
