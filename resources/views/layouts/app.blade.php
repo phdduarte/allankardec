@@ -46,17 +46,17 @@
     <div id="app" class="bg-green-light">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
-            <div class="navbar-header">
-                @if (Auth::guest())
-                            <!-- <li><a href="{{ route('login') }}">Login</a></li> -->
-                            <!-- <li><a href="{{ route('register') }}">Register</a></li> -->
-                @else
-                <button type="button" data-toggle="collapse" data-target="#app-navbar-collapse" class="navbar-toggle collapsed"><span class="sr-only">Toggle Navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
-                @endif
-                <a href="/">
-                    <div><img src="/images/logo_2.png" width="298" height="96" alt="logo"></div>
-                </a>
-            </div>
+                <div class="navbar-header">
+                    @if (Auth::guest())
+                                <!-- <li><a href="{{ route('login') }}">Login</a></li> -->
+                                <!-- <li><a href="{{ route('register') }}">Register</a></li> -->
+                    @else
+                    <button type="button" data-toggle="collapse" data-target="#app-navbar-collapse" class="navbar-toggle collapsed"><span class="sr-only">Toggle Navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+                    @endif
+                </div>
+                <div class="center">
+                    <img src="./images/logo_2.png" width="298" height="96" alt="logo">
+                </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
