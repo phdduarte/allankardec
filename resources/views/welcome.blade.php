@@ -552,7 +552,7 @@
 
 <body>
     <div class="wrapper">
-        <div class="flex-center position-ref" style="height: 12rem;">
+        <div class="flex-center position-ref">
             
             @if (Route::has('login'))
             <div class="top-right links">
@@ -564,7 +564,7 @@
                 @endif
             </div>
             @endif
-            <div class="">
+            <!-- <div class="">
                 <div class="row">
                     <div class="col m-1">
                         <span class="h3"> ALLAN </span>
@@ -577,8 +577,10 @@
                         <span class="h3"> KARDEC </span>
                     </div>
                 </div>
+            </div> -->
+            <div>
+                <img src="https://www.allankardec.online/images/logo_2.png" width="298" height="96" alt="logo">
             </div>
-
         </div>
         <div class="">
             @if(Session::has('sucesso')) 
