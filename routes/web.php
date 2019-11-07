@@ -1,12 +1,13 @@
 <?php
-
-
+/** ROTAS DO MENU **/
 Route::get('/links','ManuscritosController@links');
 Route::get('/contato','ManuscritosController@contato');
 Route::get('/sobre','ManuscritosController@sobre');
 Route::get('/termos','ManuscritosController@termos');
 Route::get('/glossario','ManuscritosController@glossario');
+Route::get('/mapadosite','ManuscritosController@mapadosite');
 Route::get('/','ManuscritosController@imprimir');
+/** END ROTAS DO MENU **/
 
 Route::get('/search','ManuscritosController@search');
 
@@ -23,9 +24,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('usuarios', 'UsuariosController');
 
-    // Route::get('usuarios','UsuariosController@index');
-    // Route::get('usuarios/novo','UsuariosController@create');
-    // Route::delete('usuarios/novo','UsuariosController@create');
 });  
+
 Route::get('/pdf/{id}','ManuscritosController@show');
 Route::get('/{tipo}','ManuscritosController@tipo');
