@@ -12,7 +12,7 @@
                         <div class="alert alert-danger">{{Session::get('mensagem_sucesso')}}</div>
                     @endif  
                     <div>
-                        <img src=".images/mapadosite.png" alt="MAPA DO SITE">	
+                        <img src="./images/mapadosite.png" alt="MAPA DO SITE">	
                     </div>
                 </div>
             </div>
