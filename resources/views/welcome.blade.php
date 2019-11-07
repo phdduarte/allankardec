@@ -579,8 +579,11 @@
                 </div>
             </div> -->
             <div>
-                <img src="https://www.allankardec.online/images/logo_2.png" width="298" height="96" alt="logo">
+                <a href="https://www.allankardec.online/">
+                    <img src="./images/logo_2.png" width="298" height="96" alt="logo">
+                </a>    
             </div>
+
         </div>
         <div class="">
             @if(Session::has('sucesso')) 

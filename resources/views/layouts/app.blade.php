@@ -54,8 +54,10 @@
                     <button type="button" data-toggle="collapse" data-target="#app-navbar-collapse" class="navbar-toggle collapsed"><span class="sr-only">Toggle Navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
                     @endif
                 </div>
-                <div class="center">
-                    <img src="./images/logo_2.png" width="298" height="96" alt="logo">
+                <div class="center">]
+                    <a href="https://www.allankardec.online/">
+                        <img src="./images/logo_2.png" width="298" height="96" alt="logo">
+                    </a>    
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
