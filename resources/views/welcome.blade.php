@@ -595,8 +595,7 @@ div.item input{
                         <img class="d-block w-100" src="./images/IMG_2248.jpg" alt="First slide">
                         <div class="carousel-caption">
                             <div class="">
-                                <span class="white">ALLANKARDEC.ONLINE</span> apresenta um museu on line para obras
-                                raras de Kardec e do Espiritismo.
+                                <span class="white">ALLANKARDEC.ONLINE</span> - MUSEU ONLINE DO ESPIRITISMO.
                             </div>
                         </div>
                     </div>
@@ -604,8 +603,7 @@ div.item input{
                         <img class="d-block w-100" src="./images/IMG_2238.jpg" alt="Second slide">
                         <div class="carousel-caption">
                             <div class="">
-                                <span class="white">ALLANKARDEC.ONLINE</span> apresenta um museu on line para obras
-                                raras de Kardec e do Espiritismo.
+                                <span class="white">ALLANKARDEC.ONLINE</span> - MUSEU ONLINE DO ESPIRITISMO.
                             </div>
                         </div>
                     </div>
@@ -613,8 +611,7 @@ div.item input{
                         <img class="d-block w-100" src="./images/IMG_2245.jpg" alt="Third slide">
                         <div class="carousel-caption">
                             <div class="">
-                                <span class="white">ALLANKARDEC.ONLINE</span> apresenta um museu on line para obras
-                                raras de Kardec e do Espiritismo.
+                                <span class="white">ALLANKARDEC.ONLINE</span> - MUSEU ONLINE DO ESPIRITISMO.
                             </div>
                         </div>
                     </div>
@@ -622,8 +619,7 @@ div.item input{
                         <img class="d-block w-100" src="./images/IMG_2239.jpg" alt="Four slide">
                         <div class="carousel-caption">
                             <div class="">
-                                <span class="white">ALLANKARDEC.ONLINE</span> apresenta um museu on line para obras
-                                raras de Kardec e do Espiritismo.
+                                <span class="white">ALLANKARDEC.ONLINE</span> - MUSEU ONLINE DO ESPIRITISMO.
                             </div>
                         </div>
                     </div>
@@ -631,8 +627,7 @@ div.item input{
                         <img class="d-block w-100" src="./images/IMG_2394.jpg" alt="Five slide">
                         <div class="carousel-caption">
                             <div class="">
-                                <span class="white">ALLANKARDEC.ONLINE</span> apresenta um museu on line para obras
-                                raras de Kardec e do Espiritismo.
+                                <span class="white">ALLANKARDEC.ONLINE</span> - MUSEU ONLINE DO ESPIRITISMO.
                             </div>
                         </div>
                     </div>
@@ -640,8 +635,7 @@ div.item input{
                         <img class="d-block w-100" src="./images/IMG_2251.jpg" alt="Six slide">
                         <div class="carousel-caption">
                             <div class="">
-                                <span class="white">ALLANKARDEC.ONLINE</span> apresenta um museu on line para obras
-                                raras de Kardec e do Espiritismo.
+                                <span class="white">ALLANKARDEC.ONLINE</span> - MUSEU ONLINE DO ESPIRITISMO.
                             </div>
                         </div>
                     </div>
