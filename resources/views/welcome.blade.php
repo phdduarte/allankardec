@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -469,45 +468,42 @@
     }
 
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    dt {
-        font-family: "Gill Sans", sans-serif;
-        line-height: 1.3em;
-        color: #323232;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-    }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dt {
+    font-family: "Gill Sans", sans-serif;
+    line-height: 1.3em;
+    color: #323232;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
 
-    h2 {
-        font-size: 28px;
-    }
+h2 {
+    font-size: 28px;
+}
 
-    .heading h2 {
-        float: left;
-    }
+.heading h2 {
+    float: left;
+}
 
-    .heading {
-        padding: 33px;
-        margin-top: 12px;
-        min-height: 40px;
-    }
-
-    figcaption {
-        font-family: "Gill Sans", sans-serif;
-        font-size: 14px;
-        font-weight: bold;
-        color: #4D4D4F;
-        line-height: 1.3em;
-        text-transform: uppercase;
-    }
-
-
-    .come-in {
+.heading {
+    padding: 33px;
+    margin-top: 12px;
+    min-height: 40px;
+}
+figcaption {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #4D4D4F;
+    line-height: 1.3em;
+    text-transform: uppercase;
+}
+.come-in {
   transform: translateY(600px);
   animation: come-in 0.8s ease forwards;
 }
@@ -518,38 +514,54 @@
   transform: translateY(0);
   animation: none;
 }
-
 @keyframes come-in {
   to { transform: translateY(0); }
 }
-.flex_container{
-        max-width: 420px;
-        height: 35px;
-        margin: auto;
-        display: flex;
-        margin-bottom: -30px;
-    }
-    .search{
-        flex-direction: row;
-    }
-
-    div.item{
-        /* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
-        flex: 1;
-        margin: 3px;
-        text-align: center;
-        font-size: 1em;
-        justify-content: center;
-    }
-    div.item input{
-        width: 100%;
-        height: 100%;
-        
-        border-radius: 16px;
-    }
+.search{
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+    padding: 20px 30px;
+    background: #323232;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 100;
+    text-align: center;
+}
+.search input[type=search] {
+    position: relative;
+    padding: 16px;
+    padding-right: 0;
+    width: 100%;
+    z-index: 901;
+}
+input, button .button {
+    font-family: "Arial", sans-serif;
+    font-size: 24px;
+    color: #747474;
+    background: #fff;
+    margin: 0;
+    border: none;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+div.item{
+    /* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
+    flex: 1;
+    margin: 3px;
+    text-align: center;
+    font-size: 1em;
+    justify-content: center;
+}
+div.item input{
+    width: 100%;
+    height: 100%;
+}
     </style>
 </head>
-
 <body>
     <div class="wrapper">
         <div class="flex-center position-ref">
@@ -559,25 +571,9 @@
                 @if (Auth::check())
                 <a href="{{ url('/home') }}">Dashboard</a>
                 @else
-                <!-- <a href="{{ url('/login') }}">Login</a>
-                <a href="{{ url('/register') }}">Register</a> -->
                 @endif
             </div>
             @endif
-            <!-- <div class="">
-                <div class="row">
-                    <div class="col m-1">
-                        <span class="h3"> ALLAN </span>
-                    </div>
-                    <div class="col m-1">
-                        <img src="./images/logo.PNG" width="100" height="150" class="footer-logo"
-                            alt="Bodleian Library">
-                    </div>
-                    <div class="col m-1">
-                        <span class="h3"> KARDEC </span>
-                    </div>
-                </div>
-            </div> -->
             <div>
                 <a href="https://www.allankardec.online/">
                     <img src="./images/logo_2.png" width="298" height="96" alt="logo">
@@ -661,18 +657,15 @@
             </div>
         </div>
         <!-- Grid row -->
-        <div class="container">
-                <div class="flex_container search">
-                        <div class="item">
-                            <form action="/search" method="get">
-                                <input type="text" name="q" placeholder="Digite sua pesquisa e tecle enter">
-                            </form>
-                        </div>
-                    </div>
-            
-            <div class="center py3">
-                <h2 class="h1">O MUSEU</h2>
+        <div class="search">
+            <div class="item px4">
+                <form action="/search" method="get">
+                    <input type="search" name="q" placeholder="Digite sua pesquisa e tecle enter">
+                </form>
             </div>
+        </div>
+        <div class="center py3">
+            <h2 class="h1">O MUSEU</h2>
         </div>
         <div class="container">
             <div class="pb3 clearfix">
