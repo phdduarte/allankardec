@@ -23,23 +23,48 @@
         margin-top: -20px;
     }
     .search{
-        flex-direction: row;
-    }
-
-    div.item{
-        /* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
-        flex: 1;
-        margin: 3px;
-        text-align: center;
-        font-size: 1em;
-        justify-content: center;
-    }
-    div.item input{
-        width: 100%;
-        height: 100%;
-        
-        border-radius: 16px;
-    }
+    flex-direction: row;
+    width: 100%;
+    height: 3rem;
+    padding: 0.5rem;
+    background: #323232;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 100;
+    text-align: center;
+}
+.search input[type=search] {
+    position: relative;
+    padding: 0.3rem;
+    padding-right: 0;
+    width: 70%;
+    z-index: 901;
+}
+input, button .button {
+    font-family: "Arial", sans-serif;
+    font-size: 1rem;
+    color: #747474;
+    background: #fff;
+    margin: 0;
+    border: none;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+div.item{
+    /* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
+    flex: 1;
+    margin: 3px;
+    text-align: center;
+    font-size: 1em;
+    justify-content: center;
+}
+div.item input{
+    width: 100%;
+    height: 100%;
+}
 </style>
 </head>
 <body>
@@ -105,10 +130,10 @@
             </div>
         </nav>
 
-        <div class="flex_container search">
+        <div class="search">
             <div class="item">
                 <form action="/search" method="get">
-                    <input type="text" name="q" placeholder="Digite sua pesquisa e tecle enter">
+                    <input type="search" name="q" placeholder="Digite sua pesquisa">
                 </form>
             </div>
         </div>
