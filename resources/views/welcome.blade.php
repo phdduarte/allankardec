@@ -520,8 +520,8 @@ figcaption {
 .search{
     flex-direction: row;
     width: 100%;
-    height: 100px;
-    padding: 20px 30px;
+    height: 3rem;
+    padding: 0.5rem;
     background: #323232;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -531,9 +531,9 @@ figcaption {
 }
 .search input[type=search] {
     position: relative;
-    padding: 16px;
+    padding: 0.3rem;
     padding-right: 0;
-    width: 100%;
+    width: 70%;
     z-index: 901;
 }
 input, button .button {
@@ -654,7 +654,7 @@ div.item input{
         <div class="search">
             <div class="item">
                 <form action="/search" method="get">
-                    <input type="search" name="q" placeholder="Digite sua pesquisa e tecle enter">
+                    <input type="search" name="q" placeholder="Digite sua pesquisa">
                 </form>
             </div>
         </div>
