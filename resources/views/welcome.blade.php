@@ -538,7 +538,7 @@ figcaption {
 }
 input, button .button {
     font-family: "Arial", sans-serif;
-    font-size: 24px;
+    font-size: 1rem;
     color: #747474;
     background: #fff;
     margin: 0;
@@ -658,7 +658,7 @@ div.item input{
         </div>
         <!-- Grid row -->
         <div class="search">
-            <div class="item px4">
+            <div class="item">
                 <form action="/search" method="get">
                     <input type="search" name="q" placeholder="Digite sua pesquisa e tecle enter">
                 </form>
