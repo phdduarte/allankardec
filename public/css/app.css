@@ -1,3 +1,67 @@
+.hide {
+    position: absolute!important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px)
+}
+
+@media (max-width:40em) {
+    .xs-hide {
+        display: none!important
+    }
+    .h-title-slide {
+        font-size: 0.5rem;
+    }    
+    .p-carousel {
+        padding-top: 0.3125rem!important;
+        padding-bottom: 0.3125rem!important;
+    }
+}
+
+@media (min-width:40em) and (max-width:52em) {
+    .sm-hide {
+        display: none!important
+    }
+    .h-title-slide {
+        font-size: 0.5rem;
+    }  
+    .p-carousel {
+        padding-top: 0.3125rem;
+        padding-bottom: 0.3125rem;
+    }
+}
+
+@media (min-width:52em) and (max-width:64em) {
+    .md-hide {
+        display: none!important
+    }
+    .h-title-slide {
+        font-size: 1rem;
+    }  
+    .p-carousel {
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+    }
+}
+
+@media (min-width:64em) {
+    .lg-hide {
+        display: none!important
+    }
+    .h-title-slide {
+        font-size: 1.5rem;
+    }  
+    .p-carousel {
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+    }
+}
+
+.display-none {
+    display: none!important
+}
+
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 @charset "UTF-8";
 
@@ -7412,8 +7476,6 @@ button.close {
     right: 15%;
     bottom: 20px;
     z-index: 10;
-    padding-top: 20px;
-    padding-bottom: 20px
 }
 
 .carousel-caption .btn,

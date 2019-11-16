@@ -593,48 +593,48 @@ div.item input{
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img class="d-block w-100" src="./images/IMG_2248.jpg" alt="First slide">
-                        <div class="carousel-caption">
-                            <div class="">
+                        <div class="carousel-caption p-carousel">
+                            <div class="h-title-slide">
                                 <span class="white">ALLANKARDEC.ONLINE</span> - MUSEU ONLINE DO ESPIRITISMO.
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="./images/IMG_2238.jpg" alt="Second slide">
-                        <div class="carousel-caption">
-                            <div class="">
+                        <div class="carousel-caption p-carousel">
+                            <div class="h-title-slide">
                                 <span class="white">ALLANKARDEC.ONLINE</span> - MUSEU ONLINE DO ESPIRITISMO.
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="./images/IMG_2245.jpg" alt="Third slide">
-                        <div class="carousel-caption">
-                            <div class="">
+                        <div class="carousel-caption p-carousel">
+                            <div class="h-title-slide">
                                 <span class="white">ALLANKARDEC.ONLINE</span> - MUSEU ONLINE DO ESPIRITISMO.
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="./images/IMG_2239.jpg" alt="Four slide">
-                        <div class="carousel-caption">
-                            <div class="">
+                        <div class="carousel-caption p-carousel">
+                            <div class="h-title-slide">
                                 <span class="white">ALLANKARDEC.ONLINE</span> - MUSEU ONLINE DO ESPIRITISMO.
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="./images/IMG_2394.jpg" alt="Five slide">
-                        <div class="carousel-caption">
-                            <div class="">
+                        <div class="carousel-caption p-carousel">
+                            <div class="h-title-slide">
                                 <span class="white">ALLANKARDEC.ONLINE</span> - MUSEU ONLINE DO ESPIRITISMO.
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="./images/IMG_2251.jpg" alt="Six slide">
-                        <div class="carousel-caption">
-                            <div class="">
+                        <div class="carousel-caption p-carousel">
+                            <div class="h-title-slide">
                                 <span class="white">ALLANKARDEC.ONLINE</span> - MUSEU ONLINE DO ESPIRITISMO.
                             </div>
                         </div>
