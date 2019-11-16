@@ -144,7 +144,7 @@ div.item input{
             <nav class="footer-exhibitions">
                 <div class="container">
                     <div class="py2">
-                        <a href="http://allankardec.online/links" target="_blank">LINKS DE INTERESSE PARA PESQUISADORES
+                        <a href="./links">LINKS DE INTERESSE PARA PESQUISADORES
                             E ESTUDIOSOS DO ESPIRITISMO</a>
                     </div>
                 </div>

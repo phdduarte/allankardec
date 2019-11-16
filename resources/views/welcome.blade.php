@@ -736,7 +736,7 @@ div.item input{
             <nav class="footer-exhibitions">
                 <div class="container">
                     <div>
-                        <a href="/links" target="_blank">LINKS DE INTERESSE PARA PESQUISADORES
+                        <a href="./links">LINKS DE INTERESSE PARA PESQUISADORES
                             E ESTUDIOSOS DO ESPIRITISMO</a>
                     </div>
                 </div>
