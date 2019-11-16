@@ -96,10 +96,10 @@ class ManuscritosController extends Controller
       return view('manuscritos.glossario'); 
     }
 
-    public function mapadosite()
-    {
-      return view('manuscritos.mapadosite'); 
-    }
+    // public function mapadosite()
+    // {
+    //   return view('manuscritos.mapadosite'); 
+    // }
 
     public function imprimir()
     {

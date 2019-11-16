@@ -5,7 +5,7 @@ Route::get('/contato','ManuscritosController@contato');
 Route::get('/sobre','ManuscritosController@sobre');
 Route::get('/termos','ManuscritosController@termos');
 Route::get('/glossario','ManuscritosController@glossario');
-Route::get('/mapadosite','ManuscritosController@mapadosite');
+// Route::get('/mapadosite','ManuscritosController@mapadosite');
 Route::get('/','ManuscritosController@imprimir');
 /** END ROTAS DO MENU **/
 

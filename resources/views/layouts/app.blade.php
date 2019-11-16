@@ -154,7 +154,6 @@ div.item input{
                     <li><a href="./sobre">SOBRE</a></li>
                     <li><a href="./contato">CONTATO</a></li>
                     <li><a href="./glossario">GLOSSÁRIO</a></li>
-                    <li><a href="./mapadosite">MAPA DO SITE</a></li>
                     <li><a href="./termos">TERMOS E CONDIÇÕES</a></li>
                 </ul>
             </nav>
