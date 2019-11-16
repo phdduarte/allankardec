@@ -20,9 +20,9 @@ class ManuscritosController extends Controller
         $user = auth()->user();
         
         if($user->type == 'admin'){ // se for admin vê todos os manuscritos
-            $manuscritos = Manuscrito::with('user')->orderBy('data', 'desc')->paginate(10);	
+            $manuscritos = Manuscrito::with('user')->orderBy('data')->paginate(10);	
         }else{
-            $manuscritos = Manuscrito::with('user')->where('user_id', $user->id)->orderBy('data', 'desc')->paginate(10);	
+            $manuscritos = Manuscrito::with('user')->where('user_id', $user->id)->orderBy('data')->paginate(10);	
         }
         
         return view('manuscritos.lista',['manuscritos' => $manuscritos]);
@@ -42,7 +42,7 @@ class ManuscritosController extends Controller
                       ->orWhere('descricao','like',"%$terms%")
                       ->orWhere('proprietario','like',"%$terms%")
                       ->orWhere('data','like',"%$terms%")
-                      ->orderBy('data', 'desc')
+                      ->orderBy('data')
                       ->paginate(12);
       }
       return view('manuscritos.tipo', ['manuscritos' => $manuscritos, 'tipo' => 'Pesquisa']); 
@@ -63,7 +63,7 @@ class ManuscritosController extends Controller
         return abort(400, 'Not found');
       }
       
-      $manuscritos = Manuscrito::where('tipo', $pos)->orderBy('data', 'desc')->paginate(12);
+      $manuscritos = Manuscrito::where('tipo', $pos)->orderBy('data')->paginate(12);
 
       return view('manuscritos.tipo', ['manuscritos' => $manuscritos, 'tipo' => ucfirst($tipo)]); 
     }
