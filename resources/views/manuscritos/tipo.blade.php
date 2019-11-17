@@ -19,12 +19,18 @@
                     
                     <div class="clearfix">
                       @foreach($manuscritos as $manuscrito)
-                          <div class="col col-4 min-height-40">
-                            <div class="container-img">
-                              <img src="/uploads/{{$manuscrito->photo}}" alt="Avatar" class="image">
-                              <div class="overlay">
-                                <div class="text">{{$manuscrito->titulo}}</div>
-                              </div>
+                          <div class="sm-col sm-col-12 md-col-12 lg-col-4 min-height-40">
+                            <div class="container-img p2">
+                              <a href="/pdf/{{$manuscrito->id}}">
+                                <div>
+
+                                  <img src="/uploads/{{$manuscrito->photo}}" alt="Avatar" class="image">
+                                  
+                                </div>  
+                                <div class="overlay">
+                                  <div class="text">{{$manuscrito->titulo}}</div>
+                                </div>
+                                </a> 
                             </div>
                             <div class="p1">
                               <ul class="list-reset">
