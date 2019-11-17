@@ -82,7 +82,7 @@ div.item input{
                 </div>
                 <div class="center">
                     <a href="https://www.allankardec.online/">
-                        <img src="./images/logo_2.png" width="298" height="96" alt="logo">
+                        <img src="https://www.allankardec.online/images/logo_2.png" width="298" height="96" alt="logo">
                     </a>    
                 </div>
 
