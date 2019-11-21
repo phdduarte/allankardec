@@ -13,7 +13,7 @@
                 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
 
                 <div class="panel-body">
-                    Documentos
+                    Páginas 
                     <span  id="countup" >0</span>
 
                 </div>

@@ -195,17 +195,18 @@ class ManuscritosController extends Controller
           $file->move($destinationPath,$name);
           $manuscrito->pdf = $name;
           $manuscrito->save();
+          if(!$manuscrito->numero){
+            try {
+              $parser = new \Smalot\PdfParser\Parser();
+              $pdf    = $parser->parseFile('uploads/pdf/'.$manuscrito->pdf);
+              $details  = $pdf->getDetails();  
 
-          try {
-            $parser = new \Smalot\PdfParser\Parser();
-            $pdf    = $parser->parseFile('uploads/pdf/'.$manuscrito->pdf);
-            $details  = $pdf->getDetails();  
-            $manuscrito->numero = $details['Pages'];
-            $manuscrito->save();
-          } catch (Exception $e) {
-            
+              $manuscrito->numero = $details['Pages'];
+              $manuscrito->save();
+            } catch (Exception $e) {
+              
+            }
           }
-          
            
           
       }
@@ -269,14 +270,17 @@ class ManuscritosController extends Controller
             $file->move($destinationPath,$name);
             $manuscrito->pdf = $name;
             $manuscrito->save();
-            try {
-              $parser = new \Smalot\PdfParser\Parser();
-              $pdf    = $parser->parseFile('uploads/pdf/'.$manuscrito->pdf);
-              $details  = $pdf->getDetails();  
-              $manuscrito->numero = $details['Pages'];
-              $manuscrito->save();
-            } catch (Exception $e) {
-              
+            if(!$manuscrito->numero){
+              try {
+                $parser = new \Smalot\PdfParser\Parser();
+                $pdf    = $parser->parseFile('uploads/pdf/'.$manuscrito->pdf);
+                $details  = $pdf->getDetails();  
+
+                $manuscrito->numero = $details['Pages'];
+                $manuscrito->save();
+              } catch (Exception $e) {
+                
+              }
             }
 
         }

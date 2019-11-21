@@ -46,17 +46,17 @@
                     {!!Form::label('data','Data')!!}    
                     {!!Form::input('text','data',null,['class' => 'form-control',null,'placeholder' => 'Data'])!!}  
 
-                    {!!Form::label('numero','Número de folhas')!!}   
-                    {!!Form::input('number', 'numero', null, ['class' => 'form-control', null, 'placeholder' => 'Número de folhas']) !!}
+                    {!!Form::label('numero','Número de páginas')!!}   
+                    {!!Form::input('number', 'numero', null, ['class' => 'form-control', null, 'placeholder' => 'Número de páginas']) !!}
                     {!!Form::label('tipo','Tipo do arquivo')!!}
                     {{ Form::select('tipo', $tipoManuscrito, 'Manuscrito',['class' => 'form-control', null]) }}
                     <br>
                     {!! Form::label('Escolha a imagem do manuscrito:') !!}
-                    {!! Form::file('pic', array('class' => 'image')) !!}
+                    {!! Form::file('pic') !!}
                     <br>
                     <br>
                     {!! Form::label('Escolha o PDF do manuscrito:') !!}
-                    {!! Form::file('pdf', array('class' => 'image')) !!}
+                    {!! Form::file('pdf') !!}
                     <br>
                     {!!Form::submit('Salvar', ['class' => 'btn btn-primary'])!!} 
    

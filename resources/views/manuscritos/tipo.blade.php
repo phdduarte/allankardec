@@ -50,7 +50,7 @@
                                   <b>Data: </b>{{ $manuscrito->data }}
                                 </li>
                                 <li>
-                                    <b>Páginas: </b>{{ $manuscrito->folhas }}
+                                    <b>Páginas: </b>{{ $manuscrito->numero }}
                                   </li>
                                 <li>
                                 <a href="/pdf/{{$manuscrito->id}}">abrir</a> | 
