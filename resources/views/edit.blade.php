@@ -41,6 +41,17 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                            <label for="password" class="col-md-4 control-label">Senha:</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="text" class="form-control" name="password" >
+                                    <small class="help-block">
+                                        <strong>Digite apenas se quiser mudar a senha</strong>
+                                    </small>
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('confirmed') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">Confirmado:</label>
 

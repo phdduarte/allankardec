@@ -25,7 +25,7 @@ class Manuscrito extends Model
 
     public function getDataAttribute($value)
     {
-        return $data = date('d/m/Y', strtotime($value));
+        return date('d/m/Y', strtotime($value));
     }
 
     public function setDataAttribute($value)

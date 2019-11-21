@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use \Datetime;
 use App\Manuscrito;
 use Illuminate\Http\Request;
 use App\Http\Requests;
@@ -29,13 +29,20 @@ class ManuscritosController extends Controller
     }
 
     public function search(Request $request){
-      $terms = $request->input('q');
+      $terms = trim($request->input('q'));
       
       if(empty($terms)){
         return back()->with('erro','Erro: digite o que deseja buscar');        
       }
+
+      if($this->validateDate($terms)){
+        //$manuscritos = Manuscrito::where('codigo','like', '%'.$terms.'%')->paginate(12);
+        $data = date('Y-m-d', strtotime(str_replace('/', '-', $terms)));
+        $manuscritos = Manuscrito::where('data', $data)->paginate(12);
+      }else{
+        $manuscritos = Manuscrito::where('codigo','like', '%'.$terms.'%')->paginate(12);
+      }
       
-      $manuscritos = Manuscrito::where('codigo','like', '%'.$terms.'%')->paginate(12);
       if(count($manuscritos) == 0){
         
         $manuscritos = Manuscrito::where('titulo','like', "%$terms%")
@@ -46,6 +53,11 @@ class ManuscritosController extends Controller
                       ->paginate(12);
       }
       return view('manuscritos.tipo', ['manuscritos' => $manuscritos, 'tipo' => 'Pesquisa']); 
+    }
+
+    public function total(){
+        $total = Manuscrito::sum('numero');
+        return view('counter', compact('total'));    
     }
 
     public function show($id)
@@ -251,6 +263,12 @@ class ManuscritosController extends Controller
         \Session::flash('mensagem_sucesso','Manuscrito excluido com sucesso');
 
         return Redirect::to('manuscritos');
+    }
+
+    function validateDate($date, $format = 'd/m/Y')
+    {
+        $d = DateTime::createFromFormat($format, $date);
+        return $d && $d->format($format) === $date;
     }
 
 }

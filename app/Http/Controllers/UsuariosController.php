@@ -39,8 +39,15 @@ class UsuariosController extends Controller
 
     public function update($id){
         $input = request();
-        
-        $user = User::findOrFail($id)->update($input->all());
+        $data = $input->all();
+        if(strlen(trim($data['password']))>0){
+          
+          $data['password'] = bcrypt($data['password']);
+        }else{
+          unset($data['password']);
+        }
+
+        $user = User::findOrFail($id)->update($data);
         $user = User::find($id);
         if($user->confirmed===true){
           Mail::send('emails.liberado', $user->toArray(), function($message) use ($user)

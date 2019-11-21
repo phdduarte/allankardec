@@ -10,17 +10,20 @@ Route::get('/','ManuscritosController@imprimir');
 /** END ROTAS DO MENU **/
 
 Route::get('/search','ManuscritosController@search');
+Route::get('/total','ManuscritosController@total');
+
 
 Auth::routes();
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/manuscritos','ManuscritosController@index');  
+    Route::get('/manuscritos','ManuscritosController@index');
     Route::get('/home', 'HomeController@index')->name('home');
     Route::get('manuscritos/novo','ManuscritosController@novo');
     Route::get('manuscritos/{manuscrito}/editar','ManuscritosController@editar');
     Route::post('manuscritos/salvar','ManuscritosController@salvar');
     Route::patch('manuscritos/{manuscrito}','ManuscritosController@atualizar');
     Route::delete('manuscritos/{manuscrito}','ManuscritosController@deletar');
+
 
     Route::resource('usuarios', 'UsuariosController');
 
