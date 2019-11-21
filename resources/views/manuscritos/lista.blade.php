@@ -29,7 +29,7 @@
                                 <tr>
                                   <th scope="row">{{$manuscrito->codigo}}</th>
                                   <td>{{$manuscrito -> titulo}}</td>
-                                  <td class="xs-hide sm-hide">{{ $manuscrito->user->name }}</td>
+                                  <td class="xs-hide sm-hide">{{ isset($manuscrito->user->name)?$manuscrito->user->name:'' }}</td>
                                   <td class="xs-hide sm-hide">{{ $manuscrito->data }}</td>
                                   <td>
                                     @if ($manuscrito -> tipo === '0')

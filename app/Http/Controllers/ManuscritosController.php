@@ -57,6 +57,10 @@ class ManuscritosController extends Controller
 
     public function total(){
         $total = Manuscrito::sum('numero');
+        if($total == 0)
+            $total = 1;
+        
+
         return view('counter', compact('total'));    
     }
 
@@ -191,6 +195,19 @@ class ManuscritosController extends Controller
           $file->move($destinationPath,$name);
           $manuscrito->pdf = $name;
           $manuscrito->save();
+
+          try {
+            $parser = new \Smalot\PdfParser\Parser();
+            $pdf    = $parser->parseFile('uploads/pdf/'.$manuscrito->pdf);
+            $details  = $pdf->getDetails();  
+            $manuscrito->numero = $details['Pages'];
+            $manuscrito->save();
+          } catch (Exception $e) {
+            
+          }
+          
+           
+          
       }
 
       \Session::flash('mensagem_sucesso','Manuscrito cadastrado com sucesso');
@@ -252,6 +269,16 @@ class ManuscritosController extends Controller
             $file->move($destinationPath,$name);
             $manuscrito->pdf = $name;
             $manuscrito->save();
+            try {
+              $parser = new \Smalot\PdfParser\Parser();
+              $pdf    = $parser->parseFile('uploads/pdf/'.$manuscrito->pdf);
+              $details  = $pdf->getDetails();  
+              $manuscrito->numero = $details['Pages'];
+              $manuscrito->save();
+            } catch (Exception $e) {
+              
+            }
+
         }
         return Redirect::to('manuscritos/'.$manuscrito->id.'/editar');
     }
@@ -259,7 +286,13 @@ class ManuscritosController extends Controller
     public function deletar($id)
     {
         $manuscrito = Manuscrito::findOrFail($id);
+        $pdf = $manuscrito->pdf;
+        $photo = $manuscrito->photo;
         $manuscrito->delete();
+
+        @unlink('uploads/'.$photo);
+        @unlink('uploads/pdf/'.$pdf);
+
         \Session::flash('mensagem_sucesso','Manuscrito excluido com sucesso');
 
         return Redirect::to('manuscritos');

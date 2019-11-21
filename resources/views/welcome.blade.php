@@ -32,8 +32,6 @@
         font-family: "Gill Sans";
         src: url("./fonts/gill-sans/beab4258-af94-4971-a0db-b7bc2bef74bc.eot?#iefix");
         src: url("./fonts/gill-sans/beab4258-af94-4971-a0db-b7bc2bef74bc.eot?#iefix") format("eot"),
-            url("./fonts/gill-sans/cd5a93fc-2bb1-48df-8982-11119cd6e270.woff") format("woff"),
-            url("./fonts/gill-sans/b6bdc93b-2720-4c92-b68d-48499456178e.ttf") format("truetype"),
             url("./fonts/gill-sans/944cce8d-20bf-41c1-ae29-2bc8199859db.svg#944cce8d-20bf-41c1-ae29-2bc8199859db") format("svg");
         font-weight: normal;
     }

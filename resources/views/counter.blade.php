@@ -22,6 +22,11 @@
     </div>
 </div>
 
+
+@endsection
+
+@section('js')
+
 <script>
 function animateValue(id, start, end, duration) {
     var range = end - start;
