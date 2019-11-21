@@ -19,7 +19,7 @@ class Manuscrito extends Model
         'codigo',
         'data',
         'proprietario',
-        'folhas',
+        'numero',
         'tipo'
     ];
 
