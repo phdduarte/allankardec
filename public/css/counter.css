@@ -1,0 +1,62 @@
+.center { text-align: center; }
+/* COLUMNS
+     * ------------------------------------------ */
+    .col {
+      float: left;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    .col1of2 { width: 50%; }
+     .ribbon {
+      position: relative;
+      width: 100%;
+      height: 309px;
+      background: url('../images/ribbon-background.png') repeat-x 0 0;
+      margin-top: 35px;
+      opacity: 0;
+    }
+    .ribbon:before,
+    .ribbon:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 78px;
+      height: 100%;
+    }
+    .ribbon:before {
+      left: 0;
+      background: url('../images/ribbon-left.png') no-repeat;
+    }
+    .ribbon:after {
+      right: 0;
+      background: url('../images/ribbon-right.png') no-repeat;
+    }
+    .ribbon .ribbon-content {
+      margin: auto;
+      padding: 15px 80px;
+      font-family: "Bergamo", serif;
+    }
+    .ribbon .ribbon-content p {
+      font-size: 16px;
+      line-height: 1em;
+      color: #886478;
+      margin-right: 20px;
+    }
+    .ribbon .ribbon-content span { 
+      display: block; 
+      font-family: "Arial", sans-serif;
+      font-size: 14px;
+      color: #4C4C4E;
+      margin-left: -30px;
+      text-transform: uppercase;
+    }
+    .ribbon .ribbon-content span.big-number {
+      position: relative;
+      font-family: "Bergamo", serif;
+      font-size: 78px;
+      font-weight: bold;
+      color: #886378;
+      margin-bottom: 8px;
+      z-index: 1;
+    }

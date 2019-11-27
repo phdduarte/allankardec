@@ -35,7 +35,7 @@
                             <div class="p1">
                               <ul class="list-reset">
                                 <li>
-                                  <b>id: </b>{{$manuscrito->codigo}}
+                                  <b>ID: </b>{{$manuscrito->codigo}}
                                 </li>
                                 <li>
                                   <b>Título: </b>{{$manuscrito->titulo}}

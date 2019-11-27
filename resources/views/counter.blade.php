@@ -1,24 +1,28 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-
-                <div class="panel-body">
-                    Páginas 
-                    <span  id="countup" >0</span>
-
-                </div>
-            </div>
-        </div>
+            
+                
+                    <div class="ribbon" style="opacity: 1;">
+                        <div class="ribbon-content">
+                          <div class="col col1of2 center">
+                            <span id="countup" class="big-number">0</span>
+                            <span>Total do acervo</span>
+                          </div>
+                          <div class="col col1of2">
+                            <p>O nosso museu digital se encontra constantemente sendo atualizado com novos documentos de interesse para o Espiritismo. Verifique sempre as nossas atualizações com novas fontes primárias que propiciam material de subsídio para pesquisas e estudos sobre a Doutrina Espírita. 
+                            </p><br>
+                            <p>
+                            Compartilhe e divulgue nosso museu digital: <a href="/">AllanKardec.online</a>
+                            </p>
+                          </div>
+                        </div>
+                
+                    </div>
+        
     </div>
 </div>
 
@@ -44,6 +48,6 @@ function animateValue(id, start, end, duration) {
     }, stepTime);
 }
 
-animateValue("countup", 0, {{$total}}, 5000);
+animateValue("countup", 0, {{$total}}, 2000);
 </script>
 @endsection

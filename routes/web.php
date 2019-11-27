@@ -10,7 +10,7 @@ Route::get('/','ManuscritosController@imprimir');
 /** END ROTAS DO MENU **/
 
 Route::get('/search','ManuscritosController@search');
-Route::get('/total','ManuscritosController@total');
+Route::get('/jobs','ManuscritosController@total');
 
 
 Auth::routes();
