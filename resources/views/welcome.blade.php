@@ -532,7 +532,7 @@ figcaption {
     }
     .search{
         flex-direction: row;
-        width: 80%;
+        width: 70%;
         height: 3rem;
         padding: 0.5rem;
         -webkit-box-sizing: border-box;
@@ -668,7 +668,7 @@ figcaption {
             </div>
         </div>
         <!-- Grid row -->
-                <div class="back">
+        <div class="back">
             <div class="flex_container">
 
                 <div class="search">
@@ -678,7 +678,7 @@ figcaption {
                         </form>
                     </div>
                 </div>
-                <span class="font-gill">
+                <span class="font-gill h5 center">
                     <a href="/jobs">Veja nosso acervo</a>
                 </span>
             </div>

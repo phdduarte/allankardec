@@ -29,7 +29,7 @@
     }
     .search{
         flex-direction: row;
-        width: 80%;
+        width: 70%;
         height: 3rem;
         padding: 0.5rem;
         -webkit-box-sizing: border-box;
@@ -72,6 +72,9 @@
     div.item input{
         width: 100%;
         height: 100%;
+    }
+    .font-gill {
+        font-family: "Gill Sans", sans-serif;
     }
 </style>
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -140,7 +143,6 @@
         </nav>
         <div class="back">
             <div class="flex_container">
-
                 <div class="search">
                     <div class="item">
                         <form action="/search" method="get">
@@ -148,8 +150,8 @@
                         </form>
                     </div>
                 </div>
-                <span>
-                    <a href="/jobs">Veja nossos trabalhos</a>
+                <span class="font-gill h5 center">
+                    <a href="/jobs">Veja nosso acervo</a>
                 </span>
             </div>
         </div>
