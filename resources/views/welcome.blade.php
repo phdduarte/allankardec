@@ -103,6 +103,10 @@
         margin: 0;
     }
 
+    .font-gill {
+        font-family: "Gill Sans", sans-serif;
+    }
+
     .wrapper {
         min-height: 100%;
         height: auto !important;
@@ -674,8 +678,8 @@ figcaption {
                         </form>
                     </div>
                 </div>
-                <span>
-                    <a href="/jobs">Veja nossos trabalhos</a>
+                <span class="font-gill">
+                    <a href="/jobs">Veja nosso acervo</a>
                 </span>
             </div>
         </div>
