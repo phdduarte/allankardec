@@ -515,49 +515,63 @@ figcaption {
 @keyframes come-in {
   to { transform: translateY(0); }
 }
-.search{
-    flex-direction: row;
-    width: 100%;
-    height: 3rem;
-    padding: 0.5rem;
-    background: #323232;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    z-index: 100;
-    text-align: center;
-}
-.search input[type=search] {
-    position: relative;
-    padding: 0.3rem;
-    padding-right: 0;
-    width: 70%;
-    z-index: 901;
-}
-input, button .button {
-    font-family: "Arial", sans-serif;
-    font-size: 1rem;
-    color: #747474;
-    background: #fff;
-    margin: 0;
-    border: none;
-    outline: none;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-div.item{
-    /* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
-    flex: 1;
-    margin: 3px;
-    text-align: center;
-    font-size: 1em;
-    justify-content: center;
-}
-div.item input{
-    width: 100%;
-    height: 100%;
-}
+    .flex_container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .back{
+        background: #323232;
+    }
+    .search{
+        flex-direction: row;
+        width: 80%;
+        height: 3rem;
+        padding: 0.5rem;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 100;
+        text-align: center;
+    }
+    .search input[type=search] {
+        position: relative;
+        padding: 0.3rem;
+        padding-right: 0;
+        width: 70%;
+        z-index: 901;
+    }
+    input, button .button {
+        font-family: "Arial", sans-serif;
+        font-size: 1rem;
+        color: #747474;
+        background: #fff;
+        margin: 0;
+        border: none;
+        outline: none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .flex_container span a{
+        font-weight: bold;
+        color: #FFF;
+    }
+    div.item{
+        /* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
+        flex: 1;
+        margin: 3px;
+        text-align: center;
+        font-size: 1em;
+        justify-content: center;
+    }
+    div.item input{
+        width: 100%;
+        height: 100%;
+    }
     </style>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
@@ -650,13 +664,22 @@ div.item input{
             </div>
         </div>
         <!-- Grid row -->
-        <div class="search">
-            <div class="item">
-                <form action="/search" method="get">
-                    <input type="search" name="q" placeholder="Digite sua pesquisa">
-                </form>
+                <div class="back">
+            <div class="flex_container">
+
+                <div class="search">
+                    <div class="item">
+                        <form action="/search" method="get">
+                            <input type="search" name="q" placeholder="Digite sua pesquisa">
+                        </form>
+                    </div>
+                </div>
+                <span>
+                    <a href="/jobs">Veja nossos trabalhos</a>
+                </span>
             </div>
         </div>
+
         <div class="center py3">
             <h2 class="h1">O MUSEU</h2>
         </div>
