@@ -40,7 +40,7 @@
                       </a>
                       
                       <a href="https://www.facebook.com/groups/189791881774515/">
-                        <h3>- GRUPO ESÍRITA AMÉLIE BOUDET</h3>
+                        <h3>- GRUPO ESPÍRITA AMÉLIE BOUDET</h3>
                       </a>
         
                       <a href="http://www.ipeak.net/site/index.php">
