@@ -158,7 +158,7 @@
         @yield('content')
     </div>
     <footer class="footer">
-            <nav class="footer-exhibitions">
+            <nav class="footer-exhibitions my2">
                 <div class="container">
                     <div class="py2">
                         <a href="./links">LINKS DE INTERESSE PARA PESQUISADORES

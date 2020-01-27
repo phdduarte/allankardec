@@ -201,7 +201,7 @@
 
 .footer .footer-exhibitions {
     height: 40%;
-    background: #333333;
+    background: #740303;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -339,7 +339,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     letter-spacing: 3px;
     text-decoration: none;
     text-transform: uppercase;
-    border-bottom: 1px solid #740303;
+    border-bottom: 3px solid #fff;
 }
 
 .footer .footer-navigation ul {
