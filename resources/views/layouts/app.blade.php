@@ -157,7 +157,7 @@
         </div>
         @yield('content')
     </div>
-    <footer class="footer">
+    <footer class="footer line-height-4">
             <nav class="footer-exhibitions my2">
                 <div class="container">
                     <div class="py2">
