@@ -317,7 +317,7 @@
         letter-spacing: 3px;
         text-decoration: none;
         text-transform: uppercase;
-        border-bottom: 1px solid #740303;
+        border-bottom: 3px solid #fff;
     }
 
     a {
@@ -758,8 +758,8 @@ figcaption {
             </div>
         </div>
         <!-- Grid row -->
-        <footer class="footer">
-            <nav class="footer-exhibitions">
+        <footer class="footer line-height-4">
+            <nav class="footer-exhibitions my2">
                 <div class="container">
                     <div>
                         <a href="./links">LINKS DE INTERESSE PARA PESQUISADORES
