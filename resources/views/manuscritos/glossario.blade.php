@@ -22,7 +22,7 @@
                       Os itens do acervo do museu são disponibilizados em seis categorias diferentes: 
                         <a href="https://allankardec.online/manuscrito">Manuscritos</a>, 
                         <a href="https://allankardec.online/cartas">Cartas</a>, 
-                        <a href="https://allankardec.online/fotos">Fotos</a>, 
+                        <a href="https://allankardec.online/fotos">CSI do Espiritismo</a>, 
                         <a href="https://allankardec.online/jornais">Jornais</a>, 
                         <a href="https://allankardec.online/livros">Livros</a> e 
                         <a href="https://allankardec.online/revistas">Revistas</a>.

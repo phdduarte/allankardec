@@ -719,7 +719,7 @@ figcaption {
                             <img class="img-fluid" src="./images/tipos/fotos.jpg">
                         </div>
                         </a>
-                        <figcaption class="">FOTOS</figcaption>
+                        <figcaption class="">CSI do Espiritismo</figcaption>
                     </figure>
                 </div>
                 <div class="module sm-col sm-col-12 md-col-6 lg-col-6">    
