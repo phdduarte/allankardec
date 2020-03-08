@@ -161,17 +161,17 @@
             <nav class="footer-exhibitions my2">
                 <div class="container">
                     <div class="py2">
-                        <a href="./links">LINKS DE INTERESSE PARA PESQUISADORES
+                        <a href="https://www.allankardec.online/links">LINKS DE INTERESSE PARA PESQUISADORES
                             E ESTUDIOSOS DO ESPIRITISMO</a>
                     </div>
                 </div>
             </nav>
             <nav class="footer-navigation">
                 <ul>
-                    <li><a href="./sobre">SOBRE</a></li>
-                    <li><a href="./contato">CONTATO</a></li>
-                    <li><a href="./glossario">GLOSSÁRIO</a></li>
-                    <li><a href="./termos">TERMOS E CONDIÇÕES</a></li>
+                    <li><a href="https://www.allankardec.online/sobre">SOBRE</a></li>
+                    <li><a href="https://www.allankardec.online/contato">CONTATO</a></li>
+                    <li><a href="https://www.allankardec.online/glossario">GLOSSÁRIO</a></li>
+                    <li><a href="https://www.allankardec.online/termos">TERMOS E CONDIÇÕES</a></li>
                 </ul>
             </nav>
             <nav class="footer-copyright">
