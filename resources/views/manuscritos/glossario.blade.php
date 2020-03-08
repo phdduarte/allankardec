@@ -45,7 +45,7 @@
                                 <strong>•	 PROPRIETÁRIO:</strong> Proprietário do documentos/item;
                                 </li>
                                 <li class="pb2">
-                                <strong>•	 DATA: </strong> Data do documento/item - Esta data se refere à data do item, seja a da constante do manuscrito/carta, seja a do lançamento/publicação da obra (livro/jornal/revista). Na falta da data completa, utilizaremos a último dia do mês constante no item, caso esta seja conhecida, ou a do último dia do ano constante na referida obra ou a se esta é conhecida.
+                                <strong>•	 DATA: </strong> Data do documento/item - Esta data se refere à data do item, seja a da constante do manuscrito/carta, seja a do lançamento/publicação da obra (livro/jornal/revista). Na falta da data completa, utilizaremos o último dia do mês e ano constante no item, ou o último dia do ano constante na referida obra.
                                 </li>
                                 <li class="pb2">
                                 <strong>•	 NÚMERO DE FOLHAS:</strong> Informa a quantidade de folhas/páginas do documento/item; 
