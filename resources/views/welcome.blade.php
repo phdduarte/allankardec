@@ -712,16 +712,6 @@ figcaption {
             </div>
             <br>
             <div class="pb3 clearfix">
-                <div class="module sm-col sm-col-12 md-col-6 lg-col-6">
-                    <figure class="px2">
-                        <a href="/fotos">
-                        <div class="p1">
-                            <img class="img-fluid" src="./images/tipos/fotos.jpg">
-                        </div>
-                        </a>
-                        <figcaption class="">CSI do Espiritismo</figcaption>
-                    </figure>
-                </div>
                 <div class="module sm-col sm-col-12 md-col-6 lg-col-6">    
                     <figure class="px2">
                         <a href="/jornais">
@@ -731,10 +721,7 @@ figcaption {
                         </a>
                         <figcaption class="">JORNAIS</figcaption>
                     </figure>
-                </div>    
-            </div>
-            <br>
-            <div class="pb3 clearfix">
+                </div>  
                 <div class="module sm-col sm-col-12 md-col-6 lg-col-6">
                     <figure class="px2">
                         <a href="/livros">
@@ -744,7 +731,10 @@ figcaption {
                         </a>
                         <figcaption class="">livros</figcaption>
                     </figure>
-                </div> 
+                </div>   
+            </div>
+            <br>
+            <div class="pb3 clearfix">
                 <div class="module sm-col sm-col-12 md-col-6 lg-col-6">
                     <figure class="px2">
                         <a href="/revistas">
@@ -754,7 +744,17 @@ figcaption {
                         </a>
                         <figcaption class="">REVISTAS</figcaption>
                     </figure>
-                </div>    
+                </div> 
+                <div class="module sm-col sm-col-12 md-col-6 lg-col-6">
+                    <figure class="px2">
+                        <a href="/fotos">
+                        <div class="p1">
+                            <img class="img-fluid" src="./images/tipos/fotos.jpg">
+                        </div>
+                        </a>
+                        <figcaption class="">CSI do Espiritismo</figcaption>
+                    </figure>
+                </div>   
             </div>
         </div>
         <!-- Grid row -->
