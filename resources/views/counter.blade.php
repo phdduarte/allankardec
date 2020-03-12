@@ -49,6 +49,6 @@ function animateValue(id, start, end, duration) {
     }, stepTime);
 }
 
-animateValue("countup", 0, {{$total}}, 2000);
+animateValue("countup", {{$total}} - 1000, {{$total}}, 1);
 </script>
 @endsection
