@@ -43,9 +43,9 @@
                                 <li>
                                   <b>Descrição:</b> {{ $manuscrito->descricao }}
                                 </li>
-                                <li>
+                                <!-- <li>
                                   <b>Proprietário: </b>{{ $manuscrito->proprietario }}
-                                </li>
+                                </li> -->
                                 <li>
                                   <b>Data: </b>{{ $manuscrito->data }}
                                 </li>
